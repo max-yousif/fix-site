@@ -38,4 +38,3 @@ Vraag dit gerust in de chat als je bij deze laatste stap hulp nodig hebt — dat
   ```html
   <iframe src="https://www.youtube.com/embed/JOUW-VIDEO-ID" allowfullscreen></iframe>
   ```
-- **Online afspraaksysteem**: de knop "Maak hier je afspraak" linkt nog nergens naartoe — voeg de link naar je huidige afsprakensysteem toe in `index.html` en `voetbal.html`.
