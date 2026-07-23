@@ -12,14 +12,6 @@ Dubbelklikken op `index.html` werkt soms, maar de betrouwbaarste manier:
 2. Open de hele projectmap in VS Code (`File → Open Folder`) — belangrijk: open de map, niet enkel het bestand.
 3. Rechtsklik op `index.html` → **Open with Live Server**.
 
-## Zo zet je de site gratis online (Vercel)
-1. Ga naar vercel.com en maak een gratis account met "Continue with GitHub".
-2. Klik op **Add New → Project**.
-3. Selecteer je `kinesitherapie-fix-website` repository.
-4. Framework Preset: kies **Other** (het is een pure HTML-site, geen build nodig).
-5. Laat "Build Command" en "Output Directory" op hun standaardwaarde staan en klik **Deploy**.
-6. Na een minuutje krijg je een link zoals `kinesitherapie-fix-website.vercel.app` — je site staat live.
-
 ## Je eigen domein koppelen (kinesitherapie-fix.be)
 1. Ga in Vercel naar **Project Settings → Domains**.
 2. Vul `kinesitherapie-fix.be` in en klik **Add**.
