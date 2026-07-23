@@ -12,18 +12,6 @@ Dubbelklikken op `index.html` werkt soms, maar de betrouwbaarste manier:
 2. Open de hele projectmap in VS Code (`File → Open Folder`) — belangrijk: open de map, niet enkel het bestand.
 3. Rechtsklik op `index.html` → **Open with Live Server**.
 
-Zie je geen opmaak? Controleer dat `index.html` en de mappen `css/` en `js/` in dezelfde hoofdmap staan.
-
-## Zo zet je dit op GitHub (zonder terminal)
-1. Ga naar github.com en maak een gratis account (indien nog niet gedaan).
-2. Klik rechtsboven op **+** → **New repository**.
-3. Geef als naam bv. `kinesitherapie-fix-website`, zet op **Public**, klik **Create repository**.
-4. Klik op **uploading an existing file**.
-5. Sleep alle bestanden en mappen van dit project (`index.html`, `voetbal.html`, de map `css`, de map `js`, dit `README.md`) naar het uploadvak.
-6. Klik onderaan op **Commit changes**.
-
-Klaar — je code staat nu op GitHub.
-
 ## Zo zet je de site gratis online (Vercel)
 1. Ga naar vercel.com en maak een gratis account met "Continue with GitHub".
 2. Klik op **Add New → Project**.
