@@ -1,0 +1,53 @@
+# Kinesitherapie Fix Heule — nieuwe website
+
+## Bestanden in dit project
+- `index.html` — de homepage (alles op één pagina)
+- `voetbal.html` — de aparte voetbalpagina
+- `css/style.css` — alle opmaak en kleuren
+- `js/main.js` — klein scriptje (jaartal in de footer)
+
+## Zo bekijk je de site lokaal
+Dubbelklikken op `index.html` werkt soms, maar de betrouwbaarste manier:
+1. Installeer in VS Code de extensie **Live Server**.
+2. Open de hele projectmap in VS Code (`File → Open Folder`) — belangrijk: open de map, niet enkel het bestand.
+3. Rechtsklik op `index.html` → **Open with Live Server**.
+
+Zie je geen opmaak? Controleer dat `index.html` en de mappen `css/` en `js/` in dezelfde hoofdmap staan.
+
+## Zo zet je dit op GitHub (zonder terminal)
+1. Ga naar github.com en maak een gratis account (indien nog niet gedaan).
+2. Klik rechtsboven op **+** → **New repository**.
+3. Geef als naam bv. `kinesitherapie-fix-website`, zet op **Public**, klik **Create repository**.
+4. Klik op **uploading an existing file**.
+5. Sleep alle bestanden en mappen van dit project (`index.html`, `voetbal.html`, de map `css`, de map `js`, dit `README.md`) naar het uploadvak.
+6. Klik onderaan op **Commit changes**.
+
+Klaar — je code staat nu op GitHub.
+
+## Zo zet je de site gratis online (Vercel)
+1. Ga naar vercel.com en maak een gratis account met "Continue with GitHub".
+2. Klik op **Add New → Project**.
+3. Selecteer je `kinesitherapie-fix-website` repository.
+4. Framework Preset: kies **Other** (het is een pure HTML-site, geen build nodig).
+5. Laat "Build Command" en "Output Directory" op hun standaardwaarde staan en klik **Deploy**.
+6. Na een minuutje krijg je een link zoals `kinesitherapie-fix-website.vercel.app` — je site staat live.
+
+## Je eigen domein koppelen (kinesitherapie-fix.be)
+1. Ga in Vercel naar **Project Settings → Domains**.
+2. Vul `kinesitherapie-fix.be` in en klik **Add**.
+3. Vercel toont welke DNS-instellingen (meestal een A-record en/of CNAME) je moet aanpassen bij je huidige domeinregistrar (waar je het .be-domein hebt geregistreerd).
+4. Na het aanpassen van die instellingen (kan tot 24u duren) draait je domein op de nieuwe site.
+
+Vraag dit gerust in de chat als je bij deze laatste stap hulp nodig hebt — dat hangt af van waar je domein precies geregistreerd staat.
+
+## Nog aan te passen voordat je live gaat
+- **Foto's**: alle afbeeldingen zijn nu tijdelijke placeholders (van picsum.photos). Vervang de `src="https://picsum.photos/..."` in `index.html` door links naar je eigen foto's, of zet je foto's in een map `images/` en verwijs daarnaar (bv. `src="images/praktijkruimte1.jpg"`).
+- **Voetbalpagina**: de 5 blessures zijn een startpunt. Voeg je YouTube-video's toe door dit:
+  ```html
+  <div class="video-placeholder">Video volgt</div>
+  ```
+  te vervangen door:
+  ```html
+  <iframe src="https://www.youtube.com/embed/JOUW-VIDEO-ID" allowfullscreen></iframe>
+  ```
+- **Online afspraaksysteem**: de knop "Maak hier je afspraak" linkt nog nergens naartoe — voeg de link naar je huidige afsprakensysteem toe in `index.html` en `voetbal.html`.
