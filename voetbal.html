@@ -14,17 +14,20 @@
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">
-      <span class="brand-mark">FX</span>
+      <span class="brand-mark"><img src="images/praktijk-over-ons.jpg" alt=""></span>
       Kinesitherapie Fix Heule
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="index.html">Home</a>
-      <a href="index.html#specialisaties">Specialisaties</a>
       <a href="index.html#team">Ons team</a>
+      <a href="index.html#specialisaties">Specialisaties</a>
       <a href="index.html#contact">Contact</a>
       <a href="voetbal.html" style="opacity:1; color: var(--coral); font-weight:600;">Voetbal</a>
       <a href="https://bookings.crossuite.app/b59ed60e-3dc6-402e-aebc-2b70d92452ca/step2" class="nav-cta" target="_blank" rel="noopener">Maak een afspraak</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -37,60 +40,65 @@
 </section>
 
 <section class="injury-list">
-  <div class="wrap" style="display:grid; gap:28px;">
+  <div class="wrap" style="display:grid; gap:56px;">
 
-    <article class="injury-card">
-      <div class="injury-text">
-        <p class="injury-eyebrow">Bovenbeen</p>
-        <h2>Hamstringblessure</h2>
-        <p>Een van de meest voorkomende blessures bij voetballers, vaak veroorzaakt door explosief sprinten of te weinig opwarming. We combineren manuele therapie met opbouwende krachtoefeningen om veilig terug te keren naar het veld.</p>
-      </div>
-      <div class="injury-video">
-        <div class="video-placeholder">Video volgt — vervang dit blok door een YouTube-embed zodra je filmpje klaar is.</div>
+    <article class="injury-block">
+      <p class="injury-eyebrow">Bovenbeen</p>
+      <h2>Hamstringblessure</h2>
+      <p class="injury-intro">Een van de meest voorkomende blessures bij voetballers, vaak veroorzaakt door explosief sprinten of te weinig opwarming. We combineren manuele therapie met opbouwende krachtoefeningen om veilig terug te keren naar het veld.</p>
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/YV9PFGv-mMo" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/eRQ_VXULYWc" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/yet-another-video-id" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/one-more-video-id" allowfullscreen></iframe>
       </div>
     </article>
 
-    <article class="injury-card">
-      <div class="injury-text">
-        <p class="injury-eyebrow">Enkel</p>
-        <h2>Enkelverstuiking</h2>
-        <p>Ontstaat vaak bij een verkeerde landing of duel. Naast het verminderen van zwelling en pijn werken we aan proprioceptie en stabiliteit, zodat de kans op herval kleiner wordt.</p>
-      </div>
-      <div class="injury-video">
-        <div class="video-placeholder">Video volgt</div>
-      </div>
-    </article>
-
-    <article class="injury-card">
-      <div class="injury-text">
-        <p class="injury-eyebrow">Knie</p>
-        <h2>Patellofemorale klachten</h2>
-        <p>Pijn rond de knieschijf door overbelasting, vaak bij veel sprint- en sprongwerk. Gerichte oefentherapie voor bekken-, heup- en quadricepsstabiliteit staat hierbij centraal.</p>
-      </div>
-      <div class="injury-video">
-        <div class="video-placeholder">Video volgt</div>
+    <article class="injury-block">
+      <p class="injury-eyebrow">Enkel</p>
+      <h2>Enkelverstuiking</h2>
+      <p class="injury-intro">Ontstaat vaak bij een verkeerde landing of duel. Naast het verminderen van zwelling en pijn werken we aan proprioceptie en stabiliteit, zodat de kans op herval kleiner wordt.</p>
+      <div class="video-grid">
+        <div class="video-slot"><div class="video-placeholder">Video 1 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 2 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 3 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 4 volgt</div></div>
       </div>
     </article>
 
-    <article class="injury-card">
-      <div class="injury-text">
-        <p class="injury-eyebrow">Lies</p>
-        <h2>Liesblessure</h2>
-        <p>Vaak het gevolg van herhaalde richtingsveranderingen en schoten. We bouwen de belastbaarheid van de adductoren geleidelijk op, met aandacht voor sportspecifieke bewegingen.</p>
-      </div>
-      <div class="injury-video">
-        <div class="video-placeholder">Video volgt</div>
+    <article class="injury-block">
+      <p class="injury-eyebrow">Knie</p>
+      <h2>Patellofemorale klachten</h2>
+      <p class="injury-intro">Pijn rond de knieschijf door overbelasting, vaak bij veel sprint- en sprongwerk. Gerichte oefentherapie voor bekken-, heup- en quadricepsstabiliteit staat hierbij centraal.</p>
+      <div class="video-grid">
+        <div class="video-slot"><div class="video-placeholder">Video 1 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 2 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 3 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 4 volgt</div></div>
       </div>
     </article>
 
-    <article class="injury-card">
-      <div class="injury-text">
-        <p class="injury-eyebrow">Rug</p>
-        <h2>Lage rugklachten</h2>
-        <p>Door asymmetrische belasting en veel rotatiebewegingen tijdens het voetballen. Core stability en houdingscorrectie helpen de rug te ontlasten en klachten te voorkomen.</p>
+    <article class="injury-block">
+      <p class="injury-eyebrow">Lies</p>
+      <h2>Liesblessure</h2>
+      <p class="injury-intro">Vaak het gevolg van herhaalde richtingsveranderingen en schoten. We bouwen de belastbaarheid van de adductoren geleidelijk op, met aandacht voor sportspecifieke bewegingen.</p>
+      <div class="video-grid">
+        <div class="video-slot"><div class="video-placeholder">Video 1 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 2 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 3 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 4 volgt</div></div>
       </div>
-      <div class="injury-video">
-        <div class="video-placeholder">Video volgt</div>
+    </article>
+
+    <article class="injury-block">
+      <p class="injury-eyebrow">Rug</p>
+      <h2>Lage rugklachten</h2>
+      <p class="injury-intro">Door asymmetrische belasting en veel rotatiebewegingen tijdens het voetballen. Core stability en houdingscorrectie helpen de rug te ontlasten en klachten te voorkomen.</p>
+      <div class="video-grid">
+        <div class="video-slot"><div class="video-placeholder">Video 1 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 2 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 3 volgt</div></div>
+        <div class="video-slot"><div class="video-placeholder">Video 4 volgt</div></div>
       </div>
     </article>
 
@@ -108,8 +116,8 @@
       <div>
         <h4>Navigatie</h4>
         <a href="index.html">Home</a>
-        <a href="index.html#specialisaties">Specialisaties</a>
         <a href="index.html#team">Ons team</a>
+        <a href="index.html#specialisaties">Specialisaties</a>
         <a href="voetbal.html">Voetbal</a>
       </div>
       <div>
