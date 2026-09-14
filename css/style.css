@@ -163,7 +163,9 @@ nav.main-nav a:hover { opacity: 1; }
 
 /* ---------- hero ---------- */
 .hero {
-  background: var(--dark);
+  background:
+    linear-gradient(180deg, rgba(48,63,64,0.90), rgba(48,63,64,0.94)),
+    url('../images/praktijk-1.jpg') center 35% / cover no-repeat;
   color: var(--cream);
   padding: 96px 0 110px;
   position: relative;
