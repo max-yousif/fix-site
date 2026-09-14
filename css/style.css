@@ -435,8 +435,8 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .page-hero-content { flex: 1 1 auto; min-width: 0; }
 .page-hero-logo {
-  width: 84px;
-  height: 84px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -542,7 +542,7 @@ details[open] .injury-toggle::after { transform: rotate(90deg); opacity: 0; }
   .injury-block summary { padding: 20px 22px; }
   .injury-content { padding: 0 22px 28px; }
   .page-hero-row { flex-direction: column; gap: 20px; }
-  .page-hero-logo { width: 60px; height: 60px; }
+  .page-hero-logo { width: 90px; height: 90px; }
 }
 
 /* ---------- footer ---------- */
