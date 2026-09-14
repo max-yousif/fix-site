@@ -306,10 +306,11 @@ nav.main-nav a:hover { opacity: 1; }
 .specialisaties-section { padding: 90px 0; }
 .spec-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 .spec-card {
+  position: relative;
   background: var(--white);
   border: 1px solid var(--line-dark);
   border-radius: 18px;
@@ -318,23 +319,36 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .spec-thumb {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
+  object-position: center top;
   border-radius: 12px;
   margin-bottom: 18px;
+  background: var(--cream);
 }
 .spec-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(46,56,51,0.08);
 }
 .spec-num {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(248,247,242,0.92);
   color: var(--coral);
   font-family: var(--font-display);
-  font-size: 0.85rem;
-  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 4px 11px;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(42,53,54,0.12);
 }
-.spec-card h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 10px; }
-.spec-card p { font-size: 0.92rem; color: rgba(43,51,48,0.68); margin: 0; }
+.spec-card h3 { font-size: 1.05rem; color: var(--dark); margin-bottom: 10px; }
+.spec-card p { font-size: 0.9rem; color: rgba(43,51,48,0.68); margin: 0; }
+
+@media (max-width: 960px) {
+  .spec-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ---------- team ---------- */
 .team-section {
