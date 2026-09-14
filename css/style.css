@@ -516,6 +516,13 @@ details[open] .injury-toggle::after { transform: rotate(90deg); opacity: 0; }
   margin-bottom: 6px;
 }
 .video-info p { color: rgba(43,51,48,0.75); font-size: 0.94rem; margin: 0; }
+.video-reps {
+  display: block;
+  margin-top: 8px;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
 
 @media (max-width: 640px) {
   .video-item { grid-template-columns: 1fr; gap: 12px; }
