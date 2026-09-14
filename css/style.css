@@ -435,8 +435,8 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .page-hero-content { flex: 1 1 auto; min-width: 0; }
 .page-hero-logo {
-  width: 130px;
-  height: 130px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   flex-shrink: 0;
 }
