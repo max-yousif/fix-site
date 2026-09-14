@@ -427,6 +427,19 @@ nav.main-nav a:hover { opacity: 1; }
 }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .page-hero p { max-width: 540px; margin: 18px auto 0; color: rgba(251,248,244,0.8); }
+.page-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.page-hero-content { flex: 1 1 auto; min-width: 0; }
+.page-hero-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 .injury-list { padding: 70px 0; }
 
@@ -528,6 +541,8 @@ details[open] .injury-toggle::after { transform: rotate(90deg); opacity: 0; }
   .video-item { grid-template-columns: 1fr; gap: 12px; }
   .injury-block summary { padding: 20px 22px; }
   .injury-content { padding: 0 22px 28px; }
+  .page-hero-row { flex-direction: column; gap: 20px; }
+  .page-hero-logo { width: 90px; height: 90px; }
 }
 
 /* ---------- footer ---------- */
