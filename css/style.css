@@ -565,7 +565,7 @@ details[open] .injury-toggle::after { transform: rotate(90deg); opacity: 0; }
 
 /* ---------- footer ---------- */
 footer {
-  background: var(--dark-deep);
+  background: var(--dark);
   color: rgba(251,248,244,0.75);
   padding: 56px 0 32px;
 }
