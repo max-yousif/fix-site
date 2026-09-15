@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsWrap = carousel.querySelector('.carousel-dots');
     let index = 0;
     let autoplayTimer = null;
-    const AUTOPLAY_MS = 3500;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const AUTOPLAY_MS = 3000;
 
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
@@ -74,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1, true));
 
     function startAutoplay() {
-      if (reduceMotion || slides.length < 2) return;
+      if (slides.length < 2) return;
       autoplayTimer = window.setInterval(next, AUTOPLAY_MS);
     }
     function stopAutoplay() {
@@ -86,12 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
       startAutoplay();
     }
 
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('focusin', stopAutoplay);
-    carousel.addEventListener('focusout', startAutoplay);
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden) stopAutoplay(); else startAutoplay();
+      if (document.hidden) stopAutoplay(); else restartAutoplay();
     });
 
     // Swipe-ondersteuning voor touch

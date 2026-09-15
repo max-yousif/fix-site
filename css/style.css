@@ -265,7 +265,7 @@ nav.main-nav a:hover { opacity: 1; }
 
 .carousel {
   position: relative;
-  max-width: 720px;
+  max-width: 560px;
   margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
