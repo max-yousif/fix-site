@@ -85,14 +85,40 @@
       <h2>Onze praktijkruimte</h2>
       <p>Een lichte, ruime praktijk in het centrum van Heule op het Lagaeplein, uitgerust voor zowel behandeling als revalidatie.</p>
     </div>
-    <div class="gallery-grid">
-      <img class="g1" src="images/praktijk-1.jpg" alt="Oefenruimte met kunstgras en revalidatietoestellen">
-      <img class="g2" src="images/praktijk-2.jpg" alt="Behandelruimte met behandeltafel en oefenmateriaal">
-      <img class="g3" src="images/praktijk-3.jpg" alt="Kinesitherapeuten in de praktijkruimte">
-      <img class="g4" src="images/praktijk-4.jpg" alt="Sportkinesitherapie oefenruimte met kunstgras en revalidatietoestellen">
-      <img class="g5" src="images/praktijk-5.jpg" alt="Wachtruimte met zithoek en planten">
-      <img class="g5" src="images/praktijk-6.jpg" alt="Decoratie Heule Lagaeplein in wachtruimte">
-      <!--<img class="g5" src="images/praktijk-7.jpg" alt="Gewichten en kettlebells in oefenruimte voor sportkinesitherapie">-->
+    <div class="carousel" id="gallery-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="images/praktijk-1.jpg" alt="Oefenruimte met kunstgras en revalidatietoestellen">
+          <span class="carousel-caption">Oefenruimte met kunstgras en revalidatietoestellen</span>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/praktijk-2.jpg" alt="Behandelruimte met behandeltafel en oefenmateriaal">
+          <span class="carousel-caption">Behandelruimte met behandeltafel en oefenmateriaal</span>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/praktijk-3.jpg" alt="Kinesitherapeuten in de praktijkruimte">
+          <span class="carousel-caption">Kinesitherapeuten in de praktijkruimte</span>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/praktijk-4.jpg" alt="Sportkinesitherapie oefenruimte met kunstgras en revalidatietoestellen">
+          <span class="carousel-caption">Sportkinesitherapie oefenruimte met kunstgras en revalidatietoestellen</span>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/praktijk-5.jpg" alt="Wachtruimte met zithoek en planten">
+          <span class="carousel-caption">Wachtruimte met zithoek en planten</span>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/praktijk-6.jpg" alt="Decoratie Heule Lagaeplein in wachtruimte">
+          <span class="carousel-caption">Decoratie Heule Lagaeplein in wachtruimte</span>
+        </div>
+      </div>
+      <button type="button" class="carousel-arrow prev" aria-label="Vorige foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="carousel-arrow next" aria-label="Volgende foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel-dots" role="tablist" aria-label="Foto's van de praktijk"></div>
     </div>
   </div>
 </section>
@@ -293,6 +319,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

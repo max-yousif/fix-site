@@ -29,4 +29,88 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Praktijkruimte-carrousel
+  const carousel = document.getElementById('gallery-carousel');
+  if (carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+    const nextBtn = carousel.querySelector('.carousel-arrow.next');
+    const dotsWrap = carousel.querySelector('.carousel-dots');
+    let index = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 5000;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Foto ${i + 1} van ${slides.length}`);
+      dot.addEventListener('click', () => goTo(i, true));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+      });
+    }
+
+    function goTo(i, userInitiated) {
+      index = (i + slides.length) % slides.length;
+      render();
+      if (userInitiated) restartAutoplay();
+    }
+
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1, true));
+    if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1, true));
+
+    function startAutoplay() {
+      if (reduceMotion || slides.length < 2) return;
+      autoplayTimer = window.setInterval(next, AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) window.clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay(); else startAutoplay();
+    });
+
+    // Swipe-ondersteuning voor touch
+    let touchStartX = null;
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      stopAutoplay();
+    }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      if (touchStartX === null) return;
+      const deltaX = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(deltaX) > 40) {
+        deltaX < 0 ? goTo(index + 1) : goTo(index - 1);
+      }
+      touchStartX = null;
+      restartAutoplay();
+    });
+
+    render();
+    startAutoplay();
+  }
 });
