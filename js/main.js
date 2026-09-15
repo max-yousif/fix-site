@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsWrap = carousel.querySelector('.carousel-dots');
     let index = 0;
     let autoplayTimer = null;
-    const AUTOPLAY_MS = 5000;
+    const AUTOPLAY_MS = 3500;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     slides.forEach((_, i) => {

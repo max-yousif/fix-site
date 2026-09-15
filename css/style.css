@@ -265,6 +265,8 @@ nav.main-nav a:hover { opacity: 1; }
 
 .carousel {
   position: relative;
+  max-width: 720px;
+  margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 24px 56px rgba(15,20,20,0.35);
@@ -284,17 +286,6 @@ nav.main-nav a:hover { opacity: 1; }
   height: 100%;
   object-fit: cover;
   display: block;
-}
-.carousel-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 48px 28px 20px;
-  background: linear-gradient(180deg, transparent, rgba(20,26,27,0.78));
-  color: var(--cream);
-  font-size: 0.95rem;
-  font-weight: 500;
 }
 .carousel-arrow {
   position: absolute;
@@ -342,7 +333,6 @@ nav.main-nav a:hover { opacity: 1; }
   .carousel-arrow { width: 38px; height: 38px; }
   .carousel-arrow.prev { left: 10px; }
   .carousel-arrow.next { right: 10px; }
-  .carousel-caption { padding: 36px 18px 16px; font-size: 0.85rem; }
 }
 
 /* ---------- intro / about ---------- */
