@@ -37,9 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
     const prevBtn = carousel.querySelector('.carousel-arrow.prev');
     const nextBtn = carousel.querySelector('.carousel-arrow.next');
+    const pauseBtn = carousel.querySelector('.carousel-pause');
     const dotsWrap = carousel.querySelector('.carousel-dots');
     let index = 0;
     let autoplayTimer = null;
+    let userPaused = false;
     const AUTOPLAY_MS = 3000;
 
     slides.forEach((_, i) => {
@@ -82,7 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function restartAutoplay() {
       stopAutoplay();
-      startAutoplay();
+      if (!userPaused) startAutoplay();
+    }
+
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', () => {
+        userPaused = !userPaused;
+        pauseBtn.classList.toggle('paused', userPaused);
+        pauseBtn.setAttribute('aria-label', userPaused ? 'Diashow hervatten' : 'Diashow pauzeren');
+        if (userPaused) stopAutoplay(); else startAutoplay();
+      });
     }
 
     document.addEventListener('visibilitychange', () => {
