@@ -326,6 +326,27 @@ nav.main-nav a:hover { opacity: 1; }
 .carousel-arrow:hover { background: var(--white); transform: translateY(-50%) scale(1.06); }
 .carousel-arrow.prev { left: 18px; }
 .carousel-arrow.next { right: 18px; }
+.carousel-pause {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15,20,20,0.45);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.carousel-pause:hover { background: rgba(15,20,20,0.65); }
+.carousel-pause svg { width: 16px; height: 16px; }
+.carousel-pause .icon-play { display: none; }
+.carousel-pause.paused .icon-pause { display: none; }
+.carousel-pause.paused .icon-play { display: block; }
 .carousel-dots {
   position: absolute;
   left: 0;
@@ -606,6 +627,7 @@ details[open] .injury-toggle::after { transform: rotate(90deg); opacity: 0; }
 .injury-intro { color: rgba(43,51,48,0.7); font-size: 0.95rem; max-width: 680px; margin: 22px 0 28px; }
 
 .video-list { display: grid; gap: 32px; }
+.video-item.is-hidden { display: none; }
 .video-item {
   display: grid;
   grid-template-columns: minmax(240px, 360px) 1fr;
